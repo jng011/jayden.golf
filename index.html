@@ -37,6 +37,12 @@
     font:17px/1.65 "Atkinson Hyperlegible",system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
+  /* faint card-stock grain over everything */
+  body::before{content:"";position:fixed;inset:0;z-index:2000;pointer-events:none;opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  /* scroll reveals: .rv is added by JS only, so no-JS users see everything */
+  .rv{opacity:0;transform:translateY(12px);transition:opacity .45s ease-out,transform .45s ease-out;}
+  .rv.in{opacity:1;transform:none;}
   h1,h2{font-family:"Anton",sans-serif;font-weight:400;color:var(--graphite);margin:0;letter-spacing:.01em;text-transform:uppercase;}
   p{margin:0 0 1rem;}
   a{color:var(--green-ink);}
@@ -47,17 +53,26 @@
   header{border-bottom:2px solid var(--graphite);}
   .bar{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:18px 0 14px;}
   .brand{font-family:"Anton",sans-serif;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;color:var(--graphite);text-decoration:none;}
-  .bar a.phone{font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:var(--pencil);border-bottom:1.5px solid var(--rule-dark);padding-bottom:2px;}
-  .bar a.phone:hover{color:var(--green-ink);border-color:var(--green);}
+  .bar a.phone{font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:var(--pencil);border-bottom:1.5px solid var(--rule-dark);padding-bottom:2px;
+    background:linear-gradient(var(--green),var(--green)) no-repeat left calc(100% + 1.5px)/0% 1.5px;transition:background-size .25s;}
+  .bar a.phone:hover{color:var(--green-ink);background-size:100% 1.5px;}
 
   .hero{padding:60px 0 8px;}
   .hero h1{font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.15;max-width:640px;}
   .hero h1 .flagword{position:relative;white-space:nowrap;}
   .hero h1 .flagword svg{position:absolute;bottom:.04em;right:-.95em;width:.72em;height:1.05em;}
+  .hero h1 .flagword svg path:nth-child(2){transform-origin:10px 12px;animation:flagwave 2.6s ease-in-out infinite;}
+  @keyframes flagwave{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg) scaleY(.96)}}
   .hero .sub{font-size:1.15rem;margin:16px 0 0;color:var(--pencil);}
 
   section{padding:44px 0;}
-  .info{border-top:1.5px solid var(--rule);margin-top:44px;}
+  .info{border-top:1.5px solid var(--rule);margin-top:44px;position:relative;}
+  /* one-time gag: ball rolls the top rule and drops in the cup */
+  .cup{position:absolute;top:-3px;right:4px;width:15px;height:6px;border-radius:50%;background:var(--graphite);}
+  .ball{position:absolute;top:-13px;left:0;width:11px;height:11px;border-radius:50%;background:#fff;
+    border:1px solid #d6d6ca;box-shadow:inset -2px -2px 0 rgba(0,0,0,.07);opacity:0;}
+  .ball.go{animation:roll 2s .5s cubic-bezier(.25,.75,.45,1) forwards;}
+  @keyframes roll{0%{opacity:1;transform:translateX(0)}82%{opacity:1;transform:translateX(var(--dist))}100%{opacity:0;transform:translateX(var(--dist)) translateY(8px)}}
   .info-list{list-style:none;margin:0;padding:0;}
   .info-list li{display:grid;grid-template-columns:130px 1fr;gap:16px 30px;padding:15px 0;border-bottom:1.5px solid var(--rule);align-items:baseline;font-size:1.08rem;color:var(--graphite);}
   .info-list li:last-child{border-bottom:0;}
@@ -77,8 +92,9 @@
   .contact h2{color:#fff;font-size:1.5rem;margin-bottom:10px;}
   .contact .sub2{max-width:460px;color:#d4e4d6;margin-bottom:28px;}
   .reach{display:flex;flex-wrap:wrap;gap:12px 36px;margin-bottom:36px;}
-  .reach a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:3px;}
-  .reach a:hover{border-color:#fff;}
+  .reach a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:3px;
+    background:linear-gradient(#fff,#fff) no-repeat left calc(100% + 2px)/0% 2px;transition:background-size .25s;}
+  .reach a:hover{background-size:100% 2px;}
 
   .form-card{background:var(--paper);border:2px solid var(--graphite);border-radius:6px;box-shadow:4px 4px 0 var(--green-ink);padding:28px 26px;color:var(--pencil);max-width:560px;}
   form{display:grid;gap:18px;}
@@ -122,7 +138,7 @@
     .where iframe{height:280px;}
     .form-card{padding:24px 20px;}
   }
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;animation:none !important;}.ball,.cup{display:none;}.rv{opacity:1;transform:none;}}
 </style>
 </head>
 <body>
@@ -141,6 +157,7 @@
     <p class="sub">One-on-one lessons for kids ages 5 to 11, after school and on weekends.</p>
 
     <div class="info">
+      <span class="cup" aria-hidden="true"></span><span class="ball" aria-hidden="true"></span>
       <ul class="info-list">
         <li><span class="label">Ages</span><span>5 to 11, beginners welcome</span></li>
         <li><span class="label">Clubs</span><span>Bring them if you have them</span></li>
@@ -214,6 +231,24 @@
 </main>
 
 <script>
+  // Motion: scroll reveals + the ball's roll distance. Skipped entirely under reduced-motion.
+  (function(){
+    var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!rm && 'IntersectionObserver' in window){
+      var els = document.querySelectorAll('.info-list li, .about-grid > *, .where h2, .where .addr, .where iframe, .contact h2, .contact .sub2, .contact .reach, .form-card');
+      els.forEach(function(e){ e.classList.add('rv'); });
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, {threshold:.12});
+      els.forEach(function(e){ io.observe(e); });
+    }
+    var info = document.querySelector('.info'), ball = document.querySelector('.ball');
+    if(info && ball && !rm){
+      ball.style.setProperty('--dist', (info.clientWidth - 28) + 'px');
+      ball.classList.add('go');
+    }
+  })();
+
   // Submit in the background (FormSubmit AJAX) so the visitor never leaves the page.
   (function(){
     var form = document.getElementById('lessonForm');
