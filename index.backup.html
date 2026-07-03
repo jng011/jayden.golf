@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Junior Golf Lessons with Jayden at Rancho Park, Los Angeles</title>
+<meta name="description" content="One-on-one junior golf lessons for kids ages 5 to 11 at Rancho Park Golf Course in Los Angeles." />
+
+<meta property="og:title" content="Junior Golf Lessons with Jayden" />
+<meta property="og:description" content="One-on-one junior golf lessons for kids ages 5 to 11 at Rancho Park Golf Course, Los Angeles." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --green:#1c4d2e;
+    --green-2:#163f25;
+    --gold:#b3892e;
+    --gold-dk:#94701f;
+    --ink:#1b241e;
+    --body:#48524a;
+    --cream:#f4efe3;
+    --cream-2:#ece4d2;
+    --card:#fffdf8;
+    --border:#ddd5c2;
+    --radius:8px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:"Mulish",system-ui,-apple-system,sans-serif;color:var(--body);background:var(--cream);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif;color:var(--ink);line-height:1.14;margin:0;}
+  p{margin:0 0 1rem;}
+  a{color:var(--green);}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  .kicker{font-weight:700;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:16px;}
+  .kicker.light{color:#d9c188;}
+
+  header.site{position:sticky;top:0;z-index:30;background:rgba(244,239,227,.92);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--border);}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:11px;font-family:"Fraunces";font-weight:700;color:var(--ink);font-size:1.2rem;text-decoration:none;letter-spacing:-.01em;}
+  .bar-right{display:flex;align-items:center;gap:22px;}
+  .bar-phone{font-weight:700;font-size:.94rem;color:var(--body);text-decoration:none;}
+  .bar-phone:hover{color:var(--green);}
+  .cta-sm{font-weight:700;font-size:.92rem;color:var(--green);text-decoration:none;border:1.5px solid var(--green);padding:8px 18px;border-radius:var(--radius);transition:background .18s,color .18s;}
+  .cta-sm:hover{background:var(--green);color:#fff;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;font-weight:700;font-size:1.02rem;text-decoration:none;border:0;padding:15px 30px;border-radius:var(--radius);transition:background .18s,transform .1s;}
+  .btn:active{transform:translateY(1px);}
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+  .btn-gold{background:var(--gold);color:#2a200a;}
+  .btn-gold:hover{background:var(--gold-dk);color:#fff;}
+  .btn-green{background:var(--green);color:#fff;}
+  .btn-green:hover{background:var(--green-2);}
+
+  .hero{position:relative;overflow:hidden;background:var(--green);color:#eef3ee;border-bottom:4px solid var(--gold);}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg, rgba(255,255,255,.016) 0 44px, rgba(0,0,0,.028) 44px 88px);pointer-events:none;}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.55fr 1fr;gap:40px;align-items:center;padding:84px 28px 88px;}
+  .hero h1{color:#fff;font-size:3.3rem;font-weight:600;margin-bottom:22px;letter-spacing:-.015em;}
+  .hero h1 em{font-style:italic;color:#e7cf91;font-weight:500;}
+  .hero p.lede{font-size:1.18rem;max-width:480px;margin:0 0 34px;color:#cfdcd1;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;}
+  .hero-note{font-size:.92rem;color:#aebfb0;}
+  .card-flag{background:rgba(255,255,255,.05);border:1px solid rgba(217,193,136,.32);border-radius:12px;padding:24px 26px;}
+  .card-flag .ttl{font-family:"Fraunces";color:#fff;font-size:1.05rem;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+  .card-flag dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:11px 16px;font-size:.96rem;}
+  .card-flag dt{color:#aebfb0;}
+  .card-flag dd{margin:0;color:#eef3ee;font-weight:600;text-align:right;}
+
+  section{padding:72px 0;}
+  h2{font-size:2.1rem;font-weight:600;margin-bottom:12px;letter-spacing:-.01em;}
+  .lead{font-size:1.1rem;max-width:600px;margin-bottom:34px;}
+
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:54px;align-items:start;}
+  .about-body{max-width:640px;}
+  .about-body p{margin-bottom:1.15rem;font-size:1.18rem;color:var(--ink);}
+  .sig{font-family:"Fraunces";font-style:italic;font-weight:500;font-size:1.5rem;color:var(--green);margin-top:6px;}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);}
+  .stat{padding:26px 24px;text-align:center;border-right:1px solid var(--border);}
+  .stat:last-child{border-right:0;}
+  .stat .n{font-family:"Fraunces";font-size:2.2rem;font-weight:600;color:var(--green);line-height:1;}
+  .stat .l{font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;color:var(--body);margin-top:8px;font-weight:600;}
+
+  .learn{background:var(--cream-2);}
+  .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 48px;}
+  .step{display:flex;gap:18px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--border);}
+  .step .num{flex:none;font-family:"Fraunces";font-weight:600;color:var(--gold);font-size:1.9rem;line-height:1;width:42px;}
+  .step h3{font-size:1.16rem;font-weight:600;margin-bottom:5px;}
+  .step p{margin:0;font-size:1rem;color:var(--body);}
+
+  .details{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .detail{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:var(--radius);padding:24px 26px;}
+  .detail h3{font-size:1.18rem;font-weight:600;margin-bottom:6px;}
+  .detail p{margin:0;font-size:1rem;}
+  .detail p + p{margin-top:6px;}
+
+  .contact{background:var(--green);color:#dce6dd;border-top:4px solid var(--gold);}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start;padding:74px 28px 80px;}
+  .contact h2{color:#fff;}
+  .contact p.sub{max-width:430px;color:#cbd9cd;margin-bottom:26px;}
+  .contact .direct{display:grid;gap:14px;margin-top:8px;}
+  .contact .direct a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;gap:10px;align-items:center;border-bottom:1.5px solid rgba(217,193,136,.45);padding-bottom:3px;width:fit-content;}
+  .contact .direct a:hover{border-color:var(--gold);}
+  .contact .direct .lbl{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#9fb3a3;font-weight:700;border:0;}
+
+  .form-card{background:var(--cream);border-radius:12px;padding:32px 30px;border-top:4px solid var(--gold);}
+  form{display:grid;gap:16px;}
+  .field label{display:block;font-weight:700;font-size:.9rem;color:var(--ink);margin-bottom:6px;}
+  .field input,.field textarea{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid var(--border);border-radius:6px;padding:12px 14px;transition:border-color .15s,box-shadow .15s;}
+  .field input::placeholder,.field textarea::placeholder{color:#a39a86;}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(28,77,46,.14);}
+  .field textarea{resize:vertical;min-height:88px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  form .btn{width:100%;margin-top:4px;}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .form-fine{font-size:.84rem;color:var(--body);margin:14px 0 0;text-align:center;}
+  .form-err{color:#8a2b1f;font-size:.9rem;font-weight:600;margin:12px 0 0;text-align:center;}
+  .form-ok{text-align:center;padding:18px 4px 8px;}
+  .form-ok h3{font-size:1.4rem;font-weight:600;color:var(--green);margin-bottom:8px;}
+  .form-ok p{margin:0;color:var(--body);}
+  .btn[disabled]{opacity:.6;cursor:default;}
+
+  footer.site{padding:40px 0 52px;text-align:center;color:var(--body);font-size:.9rem;}
+  footer.site a{color:var(--green);}
+  footer .fbrand{font-family:"Fraunces";color:var(--ink);font-weight:600;font-size:1.05rem;display:block;margin-bottom:6px;}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding:64px 28px 70px;}
+    .about-grid{grid-template-columns:1fr;gap:34px;}
+    .steps{grid-template-columns:1fr;gap:0;}
+    .details{grid-template-columns:1fr;}
+    .contact .wrap{grid-template-columns:1fr;gap:36px;padding:60px 28px 68px;}
+  }
+  @media (max-width:560px){
+    body{font-size:16px;}
+    .hero h1{font-size:2.5rem;}
+    .hero p.lede{font-size:1.06rem;}
+    h2{font-size:1.8rem;}
+    .row2{grid-template-columns:1fr;}
+    .stats{grid-template-columns:1fr;}
+    .stat{border-right:0;border-bottom:1px solid var(--border);}
+    .stat:last-child{border-bottom:0;}
+    .bar-phone,.cta-sm{display:none;}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Junior Golf Lessons with Jayden, home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1c4d2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4l11 3.5L5 11"/><path d="M5 21h6"/></svg>
+      Golf with Jayden
+    </a>
+    <div class="bar-right">
+      <a class="bar-phone" href="tel:+13104884254">(310) 488-4254</a>
+      <a class="cta-sm" href="#contact">Book a lesson</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="kicker light">Junior golf · Ages 5 to 11 · Los Angeles</div>
+        <h1>Junior golf lessons at <em>Rancho Park Golf Course.</em></h1>
+        <p class="lede">One-on-one lessons for kids ages 5 to 11.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Book a lesson</a>
+        </div>
+      </div>
+      <aside class="card-flag" aria-label="Lesson details at a glance">
+        <div class="ttl">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e7cf91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4l11 3.5L5 11"/><path d="M5 21h6"/></svg>
+          At a glance
+        </div>
+        <dl>
+          <dt>Ages</dt><dd>5 to 11</dd>
+          <dt>Where</dt><dd>Rancho Park, LA</dd>
+          <dt>Format</dt><dd>One-on-one</dd>
+          <dt>When</dt><dd>After school &amp; weekends</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <div class="kicker">Who's teaching</div>
+      <div class="about-body">
+        <h2 style="margin-bottom:20px;">Hi, I'm Jayden Ghiyam.</h2>
+        <p>I fell in love with golf at the age of five, and I've played it ever since. I'm now fifteen and play on my high school's golf team and in local tournaments. Now I want to pass that on by teaching younger kids in my area the game I grew up with.</p>
+        <div class="sig">Jayden</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="learn">
+    <div class="wrap">
+      <div class="kicker">The details</div>
+      <h2 style="margin-bottom:30px;">What to know before the first lesson.</h2>
+      <div class="details">
+        <div class="detail">
+          <h3>Where?</h3>
+          <p>Rancho Park Golf Course in Los Angeles.</p>
+        </div>
+        <div class="detail">
+          <h3>What to bring</h3>
+          <p>Clubs, if you have them. If not, we'll work it out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <div class="kicker light">Get started</div>
+        <h2>Set up a lesson</h2>
+        <p class="sub">Send a quick message with your child's age and I'll get back to you, usually the same day, about times and rates.</p>
+        <div class="direct">
+          <span class="lbl">Or reach me directly</span>
+          <a href="mailto:jaydenghiyam@gmail.com">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#e7cf91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            jaydenghiyam@gmail.com
+          </a>
+          <a href="tel:+13104884254">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#e7cf91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (310) 488-4254
+          </a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <!-- FormSubmit: emails the message straight to Jayden's inbox. No backend needed.
+             First real submission triggers a one-time confirmation email from FormSubmit. -->
+        <form id="lessonForm" action="https://formsubmit.co/ajax/jaydenghiyam@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New golf lesson request" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Parent or guardian name" required />
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(310) 555-1234" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="age">Child's age</label>
+            <input id="age" name="child_age" type="number" min="3" max="18" inputmode="numeric" placeholder="e.g. 8" required />
+          </div>
+          <div class="field">
+            <label for="message">Anything else? <span style="font-weight:400;color:var(--body);">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Has your child played before? Best days and times?"></textarea>
+          </div>
+          <button class="btn btn-green" type="submit">Send request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Submit in the background (FormSubmit AJAX) so the visitor never leaves the page.
+  (function(){
+    var form = document.getElementById('lessonForm');
+    if(!form) return;
+    var btn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(form.querySelector('[name="_honey"]').value) return;      // bot trap
+      if(!form.reportValidity()) return;
+      var old = document.querySelector('.form-err'); if(old) old.remove();
+      btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…';
+
+      var data = {};
+      new FormData(form).forEach(function(v,k){ data[k] = v; });
+
+      fetch(form.action, {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
+      })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {ok:r.ok, j:j}; }); })
+      .then(function(res){
+        if(res.ok){
+          btn.textContent = 'Sent ✓';
+          btn.disabled = true;
+        } else {
+          throw new Error((res.j && res.j.message) || 'Something went wrong.');
+        }
+      })
+      .catch(function(err){
+        btn.disabled = false; btn.textContent = label;
+        var p = document.createElement('p');
+        p.className = 'form-err';
+        p.textContent = "Couldn't send just now. Please email jaydenghiyam@gmail.com or call (310) 488-4254.";
+        btn.insertAdjacentElement('afterend', p);
+      });
+    });
+  })();
+</script>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="fbrand">Golf with Jayden</span>
+    Junior golf lessons · Rancho Park Golf Course in Los Angeles<br />
+    <a href="mailto:jaydenghiyam@gmail.com">jaydenghiyam@gmail.com</a> · <a href="tel:+13104884254">(310) 488-4254</a>
+  </div>
+</footer>
+
+</body>
+</html>
