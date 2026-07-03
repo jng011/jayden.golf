@@ -60,6 +60,8 @@
   .about p{font-size:1.13rem;max-width:620px;color:var(--pencil);}
   .about p:first-of-type{color:var(--graphite);}
   .about h2{font-size:1.3rem;margin-bottom:16px;}
+  .about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:start;}
+  .about-grid img{width:100%;height:auto;border:2px solid var(--graphite);border-radius:6px;box-shadow:4px 4px 0 var(--rule-dark);}
 
   .where{padding-top:0;}
   .where h2{font-size:1.3rem;margin-bottom:6px;}
@@ -106,6 +108,8 @@
     .hero{padding:44px 0 0;}
     .info-list li{grid-template-columns:1fr;gap:2px;}
     .row2{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:28px;}
+    .about-grid img{max-width:420px;}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
 </style>
@@ -135,10 +139,13 @@
   </div>
 
   <section class="about">
-    <div class="wrap">
-      <h2>About me</h2>
-      <p>I'm Jayden Ghiyam. I fell in love with golf at the age of five, and I've played it ever since. I'm now fifteen and play on my high school's golf team and in local tournaments.</p>
-      <p>Now I want to pass that on by teaching younger kids in my area the game I grew up with.</p>
+    <div class="wrap about-grid">
+      <div>
+        <h2>About me</h2>
+        <p>I'm Jayden Ghiyam. I fell in love with golf at the age of five, and I've played it ever since. I'm now fifteen and play on my high school's golf team and in local tournaments.</p>
+        <p>Now I want to pass that on by teaching younger kids in my area the game I grew up with.</p>
+      </div>
+      <img src="swing.jpg" alt="Jayden mid-swing at the driving range" width="726" height="1000" />
     </div>
   </section>
 
