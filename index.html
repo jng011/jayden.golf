@@ -3,30 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Junior Golf Lessons with Jayden at Rancho Park, Los Angeles</title>
-<meta name="description" content="One-on-one junior golf lessons for kids ages 5 to 11 at Rancho Park Golf Course in Los Angeles." />
+<title>Golf Lessons at Rancho Park Golf Course — Jayden Ghiyam</title>
+<meta name="description" content="One-on-one golf lessons for kids ages 5 to 11 at Rancho Park Golf Course in Los Angeles." />
 
-<meta property="og:title" content="Junior Golf Lessons with Jayden" />
-<meta property="og:description" content="One-on-one junior golf lessons for kids ages 5 to 11 at Rancho Park Golf Course, Los Angeles." />
+<meta property="og:title" content="Golf Lessons at Rancho Park Golf Course" />
+<meta property="og:description" content="One-on-one golf lessons for kids ages 5 to 11 at Rancho Park Golf Course, Los Angeles." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500;600&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <style>
   :root{
     --paper:#fafaf5;
-    --paper-2:#f2f2ea;
     --green:#256d46;
     --green-ink:#1c5636;
     --rule:#cbd8c8;
     --rule-dark:#9db89e;
     --graphite:#26281f;
     --pencil:#3d4033;
-    --flag:#e4572e;
     --mono:"Spline Sans Mono",ui-monospace,Menlo,monospace;
-    --hand:"Caveat",cursive;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -35,97 +32,42 @@
     font:17px/1.65 "Atkinson Hyperlegible",system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2{font-family:"Anton",sans-serif;font-weight:400;color:var(--graphite);margin:0;letter-spacing:.005em;text-transform:uppercase;}
+  h1,h2{font-family:"Anton",sans-serif;font-weight:400;color:var(--graphite);margin:0;letter-spacing:.01em;text-transform:uppercase;}
   p{margin:0 0 1rem;}
   a{color:var(--green-ink);}
-  .wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
 
-  /* mono column labels — scorecard vocabulary, they label real data */
-  .col-label{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--green);}
+  .label{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--green);}
 
-  .hand{font-family:var(--hand);color:var(--graphite);}
-
-  /* ---------- header: a scorecard's top strip ---------- */
-  header{border-bottom:2px solid var(--graphite);background:var(--paper);}
+  header{border-bottom:2px solid var(--graphite);}
   .bar{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:18px 0 14px;}
-  .brand{font-family:"Anton",sans-serif;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;color:var(--graphite);text-decoration:none;}
-  .bar-links{display:flex;gap:22px;align-items:baseline;}
-  .bar-links a{font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:var(--pencil);border-bottom:1.5px solid var(--rule-dark);padding-bottom:2px;}
-  .bar-links a:hover{color:var(--green-ink);border-color:var(--green);}
+  .brand{font-family:"Anton",sans-serif;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;color:var(--graphite);text-decoration:none;}
+  .bar a.phone{font-family:var(--mono);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:var(--pencil);border-bottom:1.5px solid var(--rule-dark);padding-bottom:2px;}
+  .bar a.phone:hover{color:var(--green-ink);border-color:var(--green);}
 
-  /* ---------- hero ---------- */
-  .hero{padding:72px 0 0;}
-  .hero .course-line{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
-  .hero .course-line .col-label{flex:none;}
-  .hero .course-line .rule-fill{flex:1;height:1px;background:var(--rule);}
-  .hero h1{font-size:clamp(3rem,9.5vw,6.4rem);line-height:.98;}
-  .hero h1 .flagword{color:var(--green);position:relative;white-space:nowrap;}
-  /* the one red mark on the page: a hand-drawn flag over the final word */
-  .hero h1 .flagword svg{position:absolute;bottom:.06em;right:-.78em;width:.6em;height:.92em;}
-  .hero .sub{max-width:520px;font-size:1.16rem;margin:30px 0 0;}
-  .hero .sub b{color:var(--graphite);}
-  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin:34px 0 0;}
-  .btn{
-    display:inline-block;font-family:var(--mono);font-weight:600;font-size:.92rem;letter-spacing:.05em;text-transform:uppercase;
-    background:var(--green);color:#fff;text-decoration:none;padding:16px 28px;border:2px solid var(--green-ink);border-radius:4px;
-    box-shadow:3px 3px 0 var(--green-ink);transition:transform .12s,box-shadow .12s;
-  }
-  .btn:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--green-ink);}
-  .btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--green-ink);}
-  .btn:focus-visible{outline:3px solid var(--flag);outline-offset:3px;}
-  .hero-cta .alt{font-size:1rem;}
-  .hero-cta .alt a{font-weight:700;}
+  .hero{padding:60px 0 8px;}
+  .hero h1{font-size:clamp(1.7rem,4.6vw,2.6rem);line-height:1.15;max-width:640px;}
+  .hero .sub{font-size:1.15rem;margin:16px 0 0;color:var(--pencil);}
 
-  /* ---------- the scorecard (signature) ---------- */
-  .card-section{padding:64px 0 8px;}
-  .scorecard{
-    border:2px solid var(--graphite);border-radius:6px;background:#fff;
-    box-shadow:5px 5px 0 var(--rule-dark);overflow:hidden;
-  }
-  .scorecard .card-head{
-    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
-    background:var(--green);color:#fff;padding:12px 22px;
-  }
-  .scorecard .card-head .t{font-family:var(--mono);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;}
-  .scorecard .card-head .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:#cfe3d2;}
-  .srow{display:grid;grid-template-columns:170px 1fr;align-items:baseline;gap:18px;padding:16px 22px;border-bottom:1.5px solid var(--rule);}
-  .srow:last-child{border-bottom:0;}
-  .srow .val{font-family:var(--hand);font-size:1.7rem;font-weight:500;line-height:1.2;color:var(--graphite);transform:rotate(-.6deg);}
-  .card-fine{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--rule-dark);text-align:right;margin:10px 4px 0;}
+  section{padding:44px 0;}
+  .info{border-top:1.5px solid var(--rule);margin-top:44px;}
+  .info-list{list-style:none;margin:0;padding:0;}
+  .info-list li{display:grid;grid-template-columns:130px 1fr;gap:16px 30px;padding:15px 0;border-bottom:1.5px solid var(--rule);align-items:baseline;font-size:1.08rem;color:var(--graphite);}
+  .info-list li:last-child{border-bottom:0;}
 
-  /* ---------- about ---------- */
-  .about{padding:72px 0;}
-  .split{display:grid;grid-template-columns:170px 1fr;gap:18px 40px;align-items:start;}
-  .split .col-label{padding-top:8px;border-top:2px solid var(--graphite);}
-  .about-body{max-width:600px;border-top:2px solid var(--graphite);padding-top:24px;}
-  .about-body p{font-size:1.22rem;line-height:1.6;color:var(--pencil);margin-bottom:1.1rem;}
-  .about-body p:first-child{color:var(--graphite);}
-  .sig{font-family:var(--hand);font-size:2.1rem;font-weight:600;color:var(--green-ink);transform:rotate(-2deg);display:inline-block;margin-top:2px;}
+  .about p{font-size:1.13rem;max-width:620px;color:var(--pencil);}
+  .about p:first-of-type{color:var(--graphite);}
+  .about h2{font-size:1.3rem;margin-bottom:16px;}
 
-  /* ---------- first lesson: yardage-book minutes ---------- */
-  .lesson{padding:0 0 72px;}
-  .lesson h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:8px;}
-  .lesson .note{max-width:540px;margin-bottom:30px;}
-  .minutes{list-style:none;margin:0;padding:0;border-top:2px solid var(--graphite);}
-  .minutes li{display:grid;grid-template-columns:170px 1fr;gap:18px 40px;padding:18px 0;border-bottom:1.5px solid var(--rule);align-items:baseline;}
-  .minutes .min{font-family:var(--mono);font-weight:600;font-size:.95rem;color:var(--green);font-variant-numeric:tabular-nums;}
-  .minutes b{color:var(--graphite);font-size:1.06rem;}
-  .minutes p{margin:2px 0 0;font-size:1rem;}
-
-  /* ---------- contact ---------- */
-  .contact{background:var(--green);color:#e9f1ea;padding:78px 0 84px;border-top:2px solid var(--graphite);}
-  .contact .split2{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start;}
-  .contact h2{color:#fff;font-size:clamp(1.9rem,4.5vw,2.7rem);margin-bottom:16px;}
-  .contact .sub2{max-width:400px;color:#d4e4d6;margin-bottom:34px;}
-  .contact .col-label{color:#a8c8ab;}
-  .reach{display:grid;gap:16px;margin-top:12px;}
-  .reach a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;width:fit-content;border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:3px;}
+  .contact{background:var(--green);color:#e9f1ea;padding:56px 0 64px;border-top:2px solid var(--graphite);}
+  .contact h2{color:#fff;font-size:1.5rem;margin-bottom:10px;}
+  .contact .sub2{max-width:460px;color:#d4e4d6;margin-bottom:28px;}
+  .reach{display:flex;flex-wrap:wrap;gap:12px 36px;margin-bottom:36px;}
+  .reach a{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;border-bottom:2px solid rgba(255,255,255,.35);padding-bottom:3px;}
   .reach a:hover{border-color:#fff;}
 
-  /* form styled like filling in a card: writing-line inputs */
-  .form-card{background:var(--paper);border:2px solid var(--graphite);border-radius:6px;box-shadow:5px 5px 0 var(--green-ink);padding:30px 28px 28px;color:var(--pencil);}
-  .form-card .fc-head{font-family:var(--mono);font-weight:600;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green);border-bottom:1.5px solid var(--rule);padding-bottom:12px;margin-bottom:20px;}
-  form{display:grid;gap:20px;}
+  .form-card{background:var(--paper);border:2px solid var(--graphite);border-radius:6px;box-shadow:4px 4px 0 var(--green-ink);padding:28px 26px;color:var(--pencil);max-width:560px;}
+  form{display:grid;gap:18px;}
   .field label{display:block;font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:2px;}
   .field input,.field textarea{
     width:100%;font:1.05rem/1.5 "Atkinson Hyperlegible",sans-serif;color:var(--graphite);
@@ -134,28 +76,29 @@
   }
   .field input::placeholder,.field textarea::placeholder{color:#a9ab9e;}
   .field input:focus,.field textarea:focus{outline:none;border-bottom:2px solid var(--green);}
-  .field textarea{resize:vertical;min-height:64px;}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-  form .btn{width:100%;margin-top:8px;cursor:pointer;font-size:1rem;}
-  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-  .form-err{color:#ffd9cd;background:rgba(0,0,0,.18);border-radius:4px;padding:10px 12px;font-size:.92rem;font-weight:700;margin:12px 0 0;text-align:center;}
-  .form-card .form-err{color:#a3311f;background:#f6e7e2;}
+  .field textarea{resize:vertical;min-height:60px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .btn{
+    font-family:var(--mono);font-weight:600;font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;
+    background:var(--green);color:#fff;border:2px solid var(--green-ink);border-radius:4px;padding:15px 26px;
+    box-shadow:3px 3px 0 var(--green-ink);cursor:pointer;width:100%;margin-top:6px;
+    transition:transform .12s,box-shadow .12s;
+  }
+  .btn:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--green-ink);}
+  .btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--green-ink);}
+  .btn:focus-visible{outline:3px solid #fff;outline-offset:3px;}
   .btn[disabled]{opacity:.65;cursor:default;}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .form-err{color:#a3311f;background:#f6e7e2;border-radius:4px;padding:10px 12px;font-size:.92rem;font-weight:700;margin:12px 0 0;text-align:center;}
 
-  footer{padding:36px 0 48px;background:var(--paper);}
+  footer{padding:30px 0 44px;}
   footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;align-items:baseline;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--pencil);}
   footer a{color:var(--green-ink);text-decoration:none;border-bottom:1px solid var(--rule-dark);}
 
-  /* ---------- responsive ---------- */
-  @media (max-width:700px){
-    .hero{padding:52px 0 0;}
-    .split,.minutes li{grid-template-columns:1fr;gap:6px;}
-    .split .col-label{border-top:0;padding-top:0;}
-    .about-body{border-top:0;padding-top:0;}
-    .srow{grid-template-columns:1fr;gap:2px;padding:14px 18px;}
-    .contact .split2{grid-template-columns:1fr;gap:44px;}
+  @media (max-width:600px){
+    .hero{padding:44px 0 0;}
+    .info-list li{grid-template-columns:1fr;gap:2px;}
     .row2{grid-template-columns:1fr;}
-    .hero-cta .btn{width:100%;text-align:center;}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
 </style>
@@ -165,87 +108,46 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top">Golf w/ Jayden</a>
-    <nav class="bar-links" aria-label="Contact">
-      <a href="tel:+13104884254">(310) 488-4254</a>
-      <a href="#contact">Book a lesson</a>
-    </nav>
+    <a class="phone" href="tel:+13104884254">(310) 488-4254</a>
   </div>
 </header>
 
 <main id="top">
 
-  <section class="hero">
-    <div class="wrap">
-      <div class="course-line" aria-hidden="true">
-        <span class="col-label">Rancho Park Golf Course · Los Angeles</span>
-        <span class="rule-fill"></span>
-        <span class="col-label">Ages 5–11</span>
-      </div>
-      <h1>Golf lessons<br />for <span class="flagword">kids<svg viewBox="0 0 40 52" fill="none" aria-hidden="true"><path d="M8 50 10 4" stroke="#26281f" stroke-width="3" stroke-linecap="round"/><path d="M10.5 5 C20 2 26 9 36 6 L34.5 20 C25 23 19 16 9.6 19 Z" fill="#e4572e"/></svg></span></h1>
-      <p class="sub">One-on-one lessons at Rancho Park, taught by a fifteen-year-old who's been playing since he was five. <b>Patient, fun, and built around your kid</b> — most of my students have never held a club.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#contact">Set up a lesson</a>
-        <span class="alt">or text me at <a href="sms:+13104884254">(310) 488-4254</a></span>
-      </div>
-    </div>
-  </section>
+  <div class="hero wrap">
+    <h1>Golf lessons at Rancho Park Golf Course</h1>
+    <p class="sub">One-on-one lessons for kids ages 5 to 11, after school and on weekends.</p>
 
-  <section class="card-section" aria-label="Lesson details">
-    <div class="wrap">
-      <div class="scorecard">
-        <div class="card-head">
-          <span class="t">Lesson Card</span>
-          <span class="n">Rancho Park GC · 10460 W Pico Blvd</span>
-        </div>
-        <div class="srow"><span class="col-label">Ages</span><span class="val">5 to 11 — beginners very welcome</span></div>
-        <div class="srow"><span class="col-label">Format</span><span class="val">just the two of us, one-on-one</span></div>
-        <div class="srow"><span class="col-label">When</span><span class="val">after school &amp; weekends</span></div>
-        <div class="srow"><span class="col-label">Clubs</span><span class="val">bring yours — or don't, we'll work it out</span></div>
-      </div>
-      <div class="card-fine">please write legibly · winter rules apply</div>
+    <div class="info">
+      <ul class="info-list">
+        <li><span class="label">Where</span><span>Rancho Park Golf Course, 10460 W Pico Blvd, Los Angeles</span></li>
+        <li><span class="label">Ages</span><span>5 to 11 — beginners welcome</span></li>
+        <li><span class="label">When</span><span>After school and weekends</span></li>
+        <li><span class="label">Clubs</span><span>Bring them if you have them; if not, we'll work it out</span></li>
+        <li><span class="label">Rates</span><span>Text or email me and I'll send times and rates</span></li>
+      </ul>
     </div>
-  </section>
+  </div>
 
   <section class="about">
-    <div class="wrap split">
-      <span class="col-label">Your coach</span>
-      <div class="about-body">
-        <p>Hi — I'm Jayden Ghiyam. I fell in love with golf at the age of five, and I've played it ever since. I'm now fifteen and play on my high school's golf team and in local tournaments.</p>
-        <p>Now I want to pass that on: teaching younger kids in my area the game I grew up with, the same way I learned it — one swing at a time, with a lot of patience.</p>
-        <span class="sig">Jayden</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="lesson">
     <div class="wrap">
-      <h2>The first lesson</h2>
-      <p class="note">Forty-five minutes at the Rancho Park practice area. Here's roughly how it goes:</p>
-      <ul class="minutes">
-        <li><span class="min">:00</span><div><b>Hellos</b><p>Meet at the range, say hi to you both, find a club that fits.</p></div></li>
-        <li><span class="min">:05</span><div><b>Grip &amp; stance</b><p>How to hold it, how to stand. We keep it simple and silly on purpose.</p></div></li>
-        <li><span class="min">:15</span><div><b>Hitting balls</b><p>The fun part. Small wins first — clean contact beats distance.</p></div></li>
-        <li><span class="min">:40</span><div><b>One thing to remember</b><p>Each kid leaves with a single thing to practice, not a lecture.</p></div></li>
-      </ul>
+      <h2>About me</h2>
+      <p>I'm Jayden Ghiyam. I fell in love with golf at the age of five, and I've played it ever since. I'm now fifteen and play on my high school's golf team and in local tournaments.</p>
+      <p>Now I want to pass that on by teaching younger kids in my area the game I grew up with.</p>
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <div class="wrap split2">
-      <div>
-        <h2>Set up a lesson</h2>
-        <p class="sub2">Send a note with your child's age and I'll get back to you — usually the same day — about times and rates.</p>
-        <span class="col-label">Or reach me directly</span>
-        <div class="reach">
-          <a href="tel:+13104884254">(310) 488-4254</a>
-          <a href="mailto:jaydenghiyam@gmail.com">jaydenghiyam@gmail.com</a>
-        </div>
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p class="sub2">Text, call, or email — or send this form and I'll get back to you, usually the same day.</p>
+      <div class="reach">
+        <a href="tel:+13104884254">(310) 488-4254</a>
+        <a href="mailto:jaydenghiyam@gmail.com">jaydenghiyam@gmail.com</a>
       </div>
 
       <div class="form-card">
-        <div class="fc-head">Lesson request</div>
-        <!-- FormSubmit: emails the message straight to Jayden's inbox. No backend needed.
-             First real submission triggers a one-time confirmation email from FormSubmit. -->
+        <!-- FormSubmit: emails the message straight to Jayden's inbox. No backend needed. -->
         <form id="lessonForm" action="https://formsubmit.co/ajax/jaydenghiyam@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New golf lesson request" />
           <input type="hidden" name="_template" value="table" />
@@ -254,27 +156,27 @@
 
           <div class="field">
             <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Parent or guardian" required />
+            <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
           <div class="row2">
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required />
             </div>
             <div class="field">
               <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(310) 555-1234" required />
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
             </div>
           </div>
           <div class="field">
             <label for="age">Child's age</label>
-            <input id="age" name="child_age" type="number" min="3" max="18" inputmode="numeric" placeholder="8" required />
+            <input id="age" name="child_age" type="number" min="3" max="18" inputmode="numeric" required />
           </div>
           <div class="field">
             <label for="message">Anything else? (optional)</label>
-            <textarea id="message" name="message" placeholder="Played before? Best days and times?"></textarea>
+            <textarea id="message" name="message"></textarea>
           </div>
-          <button class="btn" type="submit">Send request</button>
+          <button class="btn" type="submit">Send</button>
         </form>
       </div>
     </div>
@@ -325,7 +227,7 @@
 
 <footer>
   <div class="wrap">
-    <span>Golf w/ Jayden — junior lessons at Rancho Park, Los Angeles</span>
+    <span>Golf w/ Jayden — Rancho Park Golf Course, Los Angeles</span>
     <span><a href="mailto:jaydenghiyam@gmail.com">jaydenghiyam@gmail.com</a> · <a href="tel:+13104884254">(310) 488-4254</a></span>
   </div>
 </footer>
