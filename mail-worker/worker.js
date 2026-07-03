@@ -46,14 +46,14 @@ export default {
       'Message:     ' + (esc(d.message) || '(none)'),
     ].join('\r\n');
 
-    const from = 'forms@eltrove.app';
+    const from = 'forms@jayden.golf';
     const to = 'jaydenghiyam@gmail.com';
     const raw =
       'From: Golf w/ Jayden <' + from + '>\r\n' +
       'To: <' + to + '>\r\n' +
       'Reply-To: ' + esc(d.email) + '\r\n' +
       'Subject: New golf lesson request from ' + esc(d.name) + '\r\n' +
-      'Message-ID: <' + crypto.randomUUID() + '@eltrove.app>\r\n' +
+      'Message-ID: <' + crypto.randomUUID() + '@jayden.golf>\r\n' +
       'Date: ' + new Date().toUTCString() + '\r\n' +
       'MIME-Version: 1.0\r\n' +
       'Content-Type: text/plain; charset=utf-8\r\n' +
