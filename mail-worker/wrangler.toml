@@ -1,0 +1,7 @@
+name = "jaydengolf-mail"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+send_email = [
+  { name = "MAIL", destination_address = "jaydenghiyam@gmail.com" }
+]

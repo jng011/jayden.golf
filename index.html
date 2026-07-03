@@ -168,11 +168,8 @@
       </div>
 
       <div class="form-card">
-        <!-- FormSubmit: emails the message straight to Jayden's inbox. No backend needed. -->
-        <form id="lessonForm" action="https://formsubmit.co/ajax/jaydenghiyam@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New golf lesson request" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
+        <!-- Posts to our Cloudflare Worker, which emails Jayden via Email Routing. -->
+        <form id="lessonForm" action="https://jaydengolf-mail.jaydenghiyam.workers.dev" method="POST">
           <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="field">
